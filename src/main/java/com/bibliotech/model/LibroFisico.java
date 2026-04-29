@@ -4,7 +4,7 @@ public record LibroFisico(
         String isbn,
         String titulo,
         String autor,
-        int anioPublicacion,
+        int añoPublicacion,
         CategoriaRecurso categoria,
         String ubicacionEstante
 ) implements Recurso {

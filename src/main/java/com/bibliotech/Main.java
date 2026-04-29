@@ -81,7 +81,7 @@ public class Main {
     }
 
     private static void mostrarMenu() {
-        System.out.println("\n=== BiblioTech CLI ===");
+        System.out.println("\n=== BiblioTech ===");
         System.out.println("1. Alta de recurso");
         System.out.println("2. Alta de socio");
         System.out.println("3. Buscar recursos");
@@ -101,19 +101,19 @@ public class Main {
         String titulo = SCANNER.nextLine().trim();
         System.out.print("Autor: ");
         String autor = SCANNER.nextLine().trim();
-        System.out.print("Anio de publicacion: ");
-        int anio = Integer.parseInt(SCANNER.nextLine().trim());
+        System.out.print("Año de publicacion: ");
+        int año = Integer.parseInt(SCANNER.nextLine().trim());
         System.out.print("Categoria (CIENCIA, TECNOLOGIA, HISTORIA, LITERATURA, ARTE, MATEMATICA): ");
         CategoriaRecurso categoria = CategoriaRecurso.valueOf(SCANNER.nextLine().trim().toUpperCase());
 
         if ("FISICO".equals(tipo)) {
             System.out.print("Ubicacion en estante: ");
             String ubicacion = SCANNER.nextLine().trim();
-            recursoService.registrarRecurso(new LibroFisico(isbn, titulo, autor, anio, categoria, ubicacion));
+            recursoService.registrarRecurso(new LibroFisico(isbn, titulo, autor, año, categoria, ubicacion));
         } else {
             System.out.print("Formato de archivo (PDF/EPUB/etc): ");
             String formato = SCANNER.nextLine().trim();
-            recursoService.registrarRecurso(new EBook(isbn, titulo, autor, anio, categoria, formato));
+            recursoService.registrarRecurso(new EBook(isbn, titulo, autor, año, categoria, formato));
         }
         System.out.println("Recurso registrado correctamente.");
     }
@@ -125,7 +125,7 @@ public class Main {
         String dni = SCANNER.nextLine().trim();
         System.out.print("Nombre: ");
         String nombre = SCANNER.nextLine().trim();
-        System.out.print("Email: ");
+        System.out.print("Mail: ");
         String email = SCANNER.nextLine().trim();
         System.out.print("Tipo (ESTUDIANTE/DOCENTE): ");
         TipoSocio tipo = TipoSocio.valueOf(SCANNER.nextLine().trim().toUpperCase());
