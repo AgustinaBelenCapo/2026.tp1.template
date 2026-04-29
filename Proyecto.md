@@ -11,12 +11,11 @@ src/main/java/com/bibliotech/
 ├── exception: maneja errores personalizados
 └── Main.java: funciona como punto de entrada del sistema
 
-Se dividió el proyecto en paquetes según su función para mantener una estructura clara y evitar acoplamiento entre componentes.
 
-### Interfaces
+## Interfaces
 Se utilizaron interfaces en servicios y repositorios para desacoplar implementaciones y permitir futuras extensiones sin modificar la lógica principal.
 
-#### Manejo de Errores
+## Manejo de Errores
 Se implementaron excepciones personalizadas para controlar errores específicos del negocio, por ejemplo:
 
 recurso no disponible
@@ -27,7 +26,7 @@ operaciones inválidas
 Esta decisión mejora el manejo de errores, hace el código más claro y separa los errores del negocio de los errores generales del sistema.
 
 
-##### Modelado del dominio
+## Modelado del dominio
 
 Se definieron las principales entidades del sistema:
 
@@ -51,5 +50,5 @@ Operaciones
 
 Se utilizó abstracción e implementación por tipos para representar distintos comportamientos según el dominio.
 
-###### Uso de Opcional 
+## Uso de Opcional 
 Se utilizó Opcional en los métodos de búsqueda  para evitar el uso de null y reducir errores.
