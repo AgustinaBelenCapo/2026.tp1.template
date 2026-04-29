@@ -4,6 +4,6 @@ public interface Recurso {
     String isbn();
     String titulo();
     String autor();
-    int anioPublicacion();
+    int añoPublicacion();
     CategoriaRecurso categoria();
 }

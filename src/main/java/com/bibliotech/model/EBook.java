@@ -4,7 +4,7 @@ public record EBook(
         String isbn,
         String titulo,
         String autor,
-        int anioPublicacion,
+        int añoPublicacion,
         CategoriaRecurso categoria,
         String formatoArchivo
 ) implements Recurso {
